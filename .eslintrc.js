@@ -3,16 +3,17 @@ module.exports = {
     browser: true,
     es6: true,
     mocha: true,
-    node : true
+    node: true,
   },
   plugins: ['mocha'],
   extends: 'eslint:recommended',
   parserOptions: {
-    sourceType: 'module'
+    ecmaVersion: 2020,
+    sourceType: 'module',
   },
   rules: {
     indent: ['error', 2],
     quotes: ['error', 'single'],
-    semi: ['error', 'always']
-  }
+    semi: ['error', 'always'],
+  },
 };

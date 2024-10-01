@@ -1,9 +1,9 @@
-name: publish
+name: Publish
 
 on:
   push:
     tags:
-    - 'v*'
+      - "v*"
 
 permissions:
   contents: read
@@ -11,15 +11,15 @@ permissions:
 jobs:
   build:
     permissions:
-      contents: write  # for actions/create-release to create a release
+      contents: write # for actions/create-release to create a release
     name: Upload Release Asset
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
       - name: Get tag
         id: get_version
-        run: echo ::set-output name=VERSION::$(echo $GITHUB_REF | cut -d / -f 3)
+        run: echo VERSION=$(echo $GITHUB_REF | cut -d / -f 3) >> "$GITHUB_OUTPUT"
       - name: Create Zip Folder
         working-directory: dist
         run: zip -r ../html5-boilerplate_${{ steps.get_version.outputs.VERSION }}.zip ./
@@ -44,9 +44,9 @@ jobs:
           asset_name: html5-boilerplate_${{ steps.get_version.outputs.VERSION }}.zip
           asset_content_type: application/zip
       - name: Setup Node
-        uses: actions/setup-node@v3
+        uses: actions/setup-node@v4
         with:
-          node-version: 16
+          node-version: 18
           registry-url: https://registry.npmjs.org/
       - name: publish npm
         run: npm publish

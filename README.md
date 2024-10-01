@@ -13,16 +13,15 @@ community knowledge. It does not impose a specific development
 philosophy or framework, so you're free to architect your code in the
 way that you want.
 
-* Homepage: [https://html5boilerplate.com/](https://html5boilerplate.com/)
-* Source: [https://github.com/h5bp/html5-boilerplate](https://github.com/h5bp/html5-boilerplate)
-* Twitter: [@h5bp](https://twitter.com/h5bp)
+- [Homepage](https://html5boilerplate.com/)
+- [Source Code](https://github.com/h5bp/html5-boilerplate)
 
 ## About This Repository
 
 This repository is where HTML5-Boilerplate is authored. Some of the tools,
 files and processes that you see here are solely for the _production_ of
 HTML5 Boilerplate and are not _part_ of HTML5 Boilerplate. For one example, the
-[gulpfile.babel.js](https://github.com/h5bp/html5-boilerplate/blob/main/gulpfile.babel.js)
+[gulpfile.mjs](https://github.com/h5bp/html5-boilerplate/blob/main/gulpfile.mjs)
 script is used to _build_ the project. It's not part of the project itself.
 
 The project we publish is represented by the contents of the `/dist/`
@@ -32,17 +31,17 @@ Think of it this way, in the same way that you don't clone [vuejs/core](https://
 to create a Vue.js app, you don't need to clone this repository to start a new
 site or app based on HTML5 Boilerplate.
 
-So, if you're looking for a quick start template to build a web site or
+So, if you're looking for a quick start template to build a website or
 application, look at the options in the
-[Quick Start section of this document](https://github.com/h5bp/html5-boilerplate#quick-start)
+[Quick Start](https://github.com/h5bp/html5-boilerplate#quick-start) section of this document.
 
 If you want to help us _improve_ HTML5 Boilerplate then you can start with the documentation [here](.github/CONTRIBUTING.md), which includes steps to clone this repo in order to get it set up for development.
 
-## Quick start
+## Quick Start
 
 Choose one of the following options:
 
-* Using the [create-html5-boilerplate](https://github.com/h5bp/create-html5-boilerplate)
+- Using the [create-html5-boilerplate](https://github.com/h5bp/create-html5-boilerplate)
   script, instantly fetch the latest npm published package (or any version
   available on npm) with `npx`, `npm init` or `yarn create` without having to
   install any dependencies. Running the following `npx` command installs the
@@ -55,23 +54,22 @@ Choose one of the following options:
   npm run start
   ```
 
-* Using our new [Template Repository](https://github.com/h5bp/html5-boilerplate-template)
+- Using our new [Template Repository](https://github.com/h5bp/html5-boilerplate-template)
   create a new GitHub repository based on the latest code from the main branch of HTML5
   Boilerplate.
-  
-* Install with [npm](https://www.npmjs.com/): `npm install html5-boilerplate`
+
+- Install with [npm](https://www.npmjs.com/): `npm install html5-boilerplate`
   or [yarn](https://yarnpkg.com/): `yarn add html5-boilerplate`. The resulting
   `node_modules/html5-boilerplate/dist` folder represents the latest version of
   the project for end users. Depending on what you want to use and how you want
   to use it, you may have to copy and paste the contents of that folder into
   your project directory.
 
-
-* Download the latest stable release from
-  [html5boilerplate.com](https://html5boilerplate.com/). This zip file is a
+- Download the latest stable release from
+  [here](https://github.com/h5bp/html5-boilerplate/releases/download/v9.0.0/html5-boilerplate_v9.0.0.zip). This zip file is a
   snapshot of the `dist` folder. On Windows, Mac and from the file manager on
   Linux unzipping this folder will output to a folder named something like
-  `html5-boilerplate_v7.3.0`. From the command line will need to create a
+  `html5-boilerplate_v9.0.0`. From the command-line, you will need to create a
   folder and unzip the contents into that folder.
 
   ```bash
@@ -81,44 +79,25 @@ Choose one of the following options:
 
 ## Features
 
-* A finely-tuned starter template. Reap the benefits of 10 years of analysis,
+- A finely-tuned starter template: Reap the benefits of 10 years of analysis,
   research and experimentation by over 200 contributors.
-* Designed with progressive enhancement in mind.
-* Includes:
-  * [`Normalize.css`](https://necolas.github.io/normalize.css/)
-    for CSS normalizations and common bug fixes
-  * A custom build of [`Modernizr`](https://modernizr.com/) for feature
-    detection
-  * [`Apache Server Configs`](https://github.com/h5bp/server-configs-apache)
-    that improve the web site's performance and security
-* Placeholder Open Graph elements and attributes.
-* An example package.json file with [WebPack](https://webpack.js.org/) commands
-  built in to jumpstart application development
-* Placeholder CSS Media Queries.
-* Useful CSS helper classes.
-* Default print styles, performance optimized.
-* Protection against any stray `console` statements causing JavaScript
-  errors in older browsers.
-* "Delete-key friendly." Easy to strip out parts you don't need.
-* Extensive documentation.
+- Designed with progressive enhancement in mind.
+- Includes:
+  - Placeholder Open Graph elements and attributes.
+  - An example package.json file with [WebPack](https://webpack.js.org/) commands
+    built in to jumpstart application development.
+  - Placeholder CSS Media Queries.
+  - Useful CSS helper classes.
+  - Default print styles, performance optimized.
+  - "Delete-key friendly." Easy to strip out parts you don't need.
+  - Extensive documentation.
 
-## Browser support
+## Browser Support
 
-HTML5-Boilerplate supports the latest, stable releases of all major browsers. 
+HTML5-Boilerplate supports the latest, stable releases of all major browsers.
 
-You can find our range of supported browsers in our [package.json](https://github.com/h5bp/html5-boilerplate/blob/main/package.json#L56-L62) At present we extend the [browserlist default](https://github.com/browserslist/browserslist#full-list) with the addition of IE 11 and [FireFox ESR.](https://www.mozilla.org/en-US/firefox/enterprise/)
-
-```json
-  "browserslist": [
-    "> 0.5%",
-    "last 2 versions",
-    "Firefox ESR",
-    "not dead",
-    "IE 11"
-  ],
-```
-
-[That configuration translates to this full list of browsers.](https://browserslist.dev/?q=ID4gMC41JSwgICAgIGxhc3QgMiB2ZXJzaW9ucywgICAgIEZpcmVmb3ggRVNSLCAgICBub3QgZGVhZCwgICAgIElFIDEx)
+Check the `default` configuration from [Browserslist](https://browsersl.ist/#q=defaults)
+for more details on browsers and versions covered.
 
 ## Documentation
 
@@ -130,12 +109,12 @@ write about your project.
 ## Contributing
 
 Hundreds of developers have helped to make the HTML5 Boilerplate. Anyone is
-welcome to [contribute](.github/CONTRIBUTING.md), however, if you decide to get
+welcome to [contribute](.github/CONTRIBUTING.md). However, if you decide to get
 involved, please take a moment to review the [guidelines](.github/CONTRIBUTING.md):
 
-* [Bug reports](.github/CONTRIBUTING.md#bugs)
-* [Feature requests](.github/CONTRIBUTING.md#features)
-* [Pull requests](.github/CONTRIBUTING.md#pull-requests)
+- [Bug reports](.github/CONTRIBUTING.md#bugs)
+- [Feature requests](.github/CONTRIBUTING.md#features)
+- [Pull requests](.github/CONTRIBUTING.md#pull-requests)
 
 ## License
 

@@ -7,18 +7,16 @@ Here is some useful advice for how you can make your project with HTML5
 Boilerplate even better. We don't want to include it all by default, as not
 everything fits with everyone's needs.
 
-* [Server Configuration](#server-configuration)
-* [App Stores](#app-stores)
-* [DNS prefetching](#dns-prefetching)
-* [Miscellaneous](#miscellaneous)
-* [News Feeds](#news-feeds)
-* [Search](#search)
-* [Social Networks](#social-networks)
-* [URLs](#urls)
-* [Web Apps](#web-apps)
-* [humans.txt](#humanstxt)
-* [security.txt](#security.txt)
-
+- [Server Configuration](#server-configuration)
+- [App Stores](#app-stores)
+- [DNS prefetching](#dns-prefetching)
+- [Miscellaneous](#miscellaneous)
+- [News Feeds](#news-feeds)
+- [Search](#search)
+- [Social Networks](#social-networks)
+- [URLs](#urls)
+- [Web Apps](#web-apps)
+- [security.txt](#securitytxt)
 
 ## Server Configuration
 
@@ -55,7 +53,7 @@ request.
 ### Implicit prefetches
 
 There is a lot of prefetching done for you automatically by the browser. When
-the browser encounters an anchor in your html that does not share the same
+the browser encounters an anchor in your HTML that does not share the same
 domain name as the current location the browser requests, from the client OS,
 the IP address for this new domain. The client first checks its cache and then,
 lacking a cached copy, makes a request from a DNS server. These requests happen
@@ -69,7 +67,7 @@ is increased on a mobile platform where DNS latency can be greater.
 ### Explicit prefetches
 
 Typically the browser only scans the HTML for foreign domains. If you have
-resources that are outside of your HTML (a javascript request to a remote server
+resources that are outside of your HTML (a JavaScript request to a remote server
 or a CDN that hosts content that may not be present on every page of your site,
 for example) then you can queue up a domain name to be prefetched.
 
@@ -84,12 +82,10 @@ Charset](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/meta#attr-cha
 element (which should go right at the top of the `head`), so the browser can act
 on them ASAP.
 
-
 ### Further reading about DNS prefetching
 
-* https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/X-DNS-Prefetch-Control
-* https://dev.chromium.org/developers/design-documents/dns-prefetching
-
+- https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/X-DNS-Prefetch-Control
+- https://dev.chromium.org/developers/design-documents/dns-prefetching
 
 ## Search
 
@@ -98,11 +94,13 @@ on them ASAP.
 After creating a [sitemap](https://www.sitemaps.org/protocol.html)
 
 Submit it to search engine tool:
-* [Google](https://www.google.com/webmasters/tools/sitemap-list)
-* [Bing](https://www.bing.com/toolbox/webmaster)
-* [Yandex](https://webmaster.yandex.com/)
-* [Baidu](https://zhanzhang.baidu.com/) OR Insert the following line anywhere in
+
+- [Google](https://www.google.com/webmasters/tools/sitemap-list)
+- [Bing](https://www.bing.com/toolbox/webmaster)
+- [Yandex](https://webmaster.yandex.com/)
+- [Baidu](https://zhanzhang.baidu.com/) OR Insert the following line anywhere in
   your robots.txt file, specifying the path to your sitemap:
+
 ```
 Sitemap: https://example.com/sitemap_location.xml
 ```
@@ -130,31 +128,26 @@ plugin](https://developer.mozilla.org/en-US/docs/Web/OpenSearch).
 <link rel="search" title="" type="application/opensearchdescription+xml" href="">
 ```
 
-
 ## Miscellaneous
 
-* Use
-  [polyfills](https://github.com/Modernizr/Modernizr/wiki/HTML5-Cross-browser-Polyfills).
-
-* Use [Microformats](http://microformats.org/wiki/Main_Page) (via
-  [microdata](http://microformats.org/wiki/microdata)) for optimum search
+- Use [Microformats](https://microformats.org/wiki/Main_Page) (via
+  [microdata](https://microformats.org/wiki/microdata)) for optimum search
   results
-  [visibility](https://webmasters.googleblog.com/2009/05/introducing-rich-snippets.html).
+  [visibility](https://developers.google.com/search/blog/2009/05/introducing-rich-snippets).
 
-* If you want to disable the translation prompt in Chrome or block Google
+- If you want to disable the translation prompt in Chrome or block Google
   Translate from translating your web page, use [`<meta name="google"
-  content="notranslate">`](https://support.google.com/webmasters/answer/79812).
+content="notranslate">`](https://developers.google.com/search/docs/crawling-indexing/special-tags).
   To disable translation for a particular section of the web page, add
   [`class="notranslate"`](https://support.google.com/translate/?hl=en#2641276).
 
-* If you want to disable the automatic detection and formatting of possible
+- If you want to disable the automatic detection and formatting of possible
   phone numbers in Safari on iOS, use [`<meta name="format-detection"
-  content="telephone=no">`](https://developer.apple.com/library/archive/documentation/AppleApplications/Reference/SafariHTMLRef/Articles/MetaTags.html).
+content="telephone=no">`](https://developer.apple.com/library/archive/documentation/AppleApplications/Reference/SafariHTMLRef/Articles/MetaTags.html).
 
-* Avoid development/stage websites "leaking" into SERPs (search engine results
+- Avoid development/stage websites "leaking" into SERPs (search engine results
   page) by [implementing X-Robots-tag
   headers](https://github.com/h5bp/html5-boilerplate/issues/804).
-
 
 ## News Feeds
 
@@ -171,7 +164,7 @@ scratch](https://www.rssboard.org/rss-specification)?
 
 Atom is similar to RSS, and you might prefer to use it instead of or in addition
 to it. [See what Atom's all
-about](https://en.wikipedia.org/wiki/Atom_(Web_standard)).
+about](<https://en.wikipedia.org/wiki/Atom_(Web_standard)>).
 
 ```html
 <link rel="alternate" type="application/atom+xml" title="Atom" href="/atom.xml">
@@ -186,14 +179,12 @@ should contain the location of your pingback service.
 <link rel="pingback" href="">
 ```
 
-* High-level explanation:
+- High-level explanation:
   https://codex.wordpress.org/Introduction_to_Blogging#Pingbacks
-* Step-by-step example case:
+- Step-by-step example case:
   https://www.hixie.ch/specs/pingback/pingback-1.0#TOC5
-* PHP pingback service:
+- PHP pingback service:
   https://web.archive.org/web/20131211032834/http://blog.perplexedlabs.com/2009/07/15/xmlrpc-pingbacks-using-php/
-
-
 
 ## Social Networks
 
@@ -220,6 +211,8 @@ Facebook).
 <meta property="og:type" content="website">
 <meta property="og:title" content="">
 <meta property="og:image" content="https://www.example.com/path/to/image.jpg">
+<!-- Empty for decorative images. -->
+<meta property="og:image:alt" content="Example image depicting...">
 <meta property="og:description" content="">
 <meta property="og:site_name" content="">
 <meta property="article:author" content="">
@@ -231,10 +224,7 @@ Twitter provides a snippet specification that serves a similar purpose to Open
 Graph. In fact, Twitter will use Open Graph when Cards is not available. You can
 read more about the various snippet formats in the
 [official Twitter Cards
-documentation](https://developer.twitter.com/en/docs/tweets/optimize-with-cards/overview/abouts-cards),
-and you can validate your markup with the [Card
-validator](https://cards-dev.twitter.com/validator) (needs registration to
-Twitter).
+documentation](https://developer.twitter.com/en/docs/twitter-for-websites/cards/overview/abouts-cards).
 
 ```html
 <meta name="twitter:card" content="summary">
@@ -257,7 +247,7 @@ search-engine, although this vocabulary is also used by Microsoft, Pinterest and
 Yandex.
 
 You can validate your markup with the [Structured Data Testing
-Tool](https://search.google.com/structured-data/testing-tool). Also, please
+Tool](https://developers.google.com/search/docs/appearance/structured-data). Also, please
 note that this markup requires to add attributes to your top `html` tag.
 
 ```html
@@ -289,7 +279,7 @@ the cleaner, more accurate `https://www.example.com/cart.html`.
 There are a couple of meta tags that provide information about a web app when
 added to the Home Screen on iOS:
 
-* Adding `apple-mobile-web-app-capable` will make your web app chrome-less and
+- Adding `apple-mobile-web-app-capable` will make your web app chrome-less and
   provide the default iOS app view. You can control the color scheme of the
   default view by adding `apple-mobile-web-app-status-bar-style`.
 
@@ -298,7 +288,7 @@ added to the Home Screen on iOS:
 <meta name="apple-mobile-web-app-status-bar-style" content="black">
 ```
 
-* You can use `apple-mobile-web-app-title` to add a specific sites name for the
+- You can use `apple-mobile-web-app-title` to add a specific sites name for the
   Home Screen icon.
 
 ```html
@@ -308,7 +298,6 @@ added to the Home Screen on iOS:
 For further information please read the [official
 documentation](https://developer.apple.com/library/archive/documentation/AppleApplications/Reference/SafariHTMLRef/Articles/MetaTags.html)
 on Apple's site.
-
 
 ### Apple Touch Icons
 
@@ -326,7 +315,6 @@ Though the dimensions of the icon can vary between iOS devices and versions one
 For a more comprehensive overview, please refer to Mathias' [article on Touch
 Icons](https://mathiasbynens.be/notes/touch-icons).
 
-
 ### Apple Touch Startup Image
 
 Apart from that it is possible to add start-up screens for web apps on iOS. This
@@ -338,7 +326,6 @@ for an iPhone:
 ```html
 <link rel="apple-touch-startup-image" media="(max-device-width: 480px) and (-webkit-min-device-pixel-ratio: 2)" href="img/startup.png">
 ```
-
 
 ### Theme Color
 
@@ -354,16 +341,7 @@ colors.
 
 The `content` attribute extension can take any valid CSS color.
 
-Currently, the `theme-color` meta extension is supported by [Chrome 39+ for
-Android
-Lollipop](https://developers.google.com/web/updates/2014/11/Support-for-theme-color-in-Chrome-39-for-Android).
-
-### humans.txt
-
-You can include a `humans.txt` file in the root of your site which can be used
-to provide information about people involved with the website.
-
-For more information about `humans.txt`, please see: https://humanstxt.org/
+For browser support details, refer to [Can I Use](https://caniuse.com/meta-theme-color).
 
 ### security.txt
 

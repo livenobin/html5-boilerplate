@@ -13,9 +13,4 @@ That's cool.
 
 ## vendor
 
-This directory can be used to contain all 3rd party library code.
-
-Our custom build of the Modernizr library is included by
-default. You may wish to create your own [custom Modernizr build with the online
-builder](https://modernizr.com/download/) or [command line
-tool](https://modernizr.com/docs#command-line-config).
+This directory can be used to contain all third-party library code.
